@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+	<title>Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="1st.css">
+</head>
+<body>
+
+	<nav id="desktop-nav">
+		<div class="logo">A&J</div>
+		<div>
+			<ul class="nav-links">
+				<li><a href="#profile">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+			</ul>
+		</div>
+		
+	</nav>
+	<section id="profile">
+		<div class="section_pic-container">
+			<img src="pic1.png"> </div>
+		<div class="section__text">
+			<p class="section__text_p1">Hello I'm</p>
+			<h1 class="title">Angelo Joe B. Sierra</h1>
+			<div class="btn-container">
+				<button class="btn btn-color-2"onclick="window.open('Resume-Aj.pdf')">Download CV</button>
+			<div class="btn-container">
+				<button class="btn btn-color-1"onclick="window.open('https://github.com/4ngeloSierra')">Github</button>
+			</div>
+			<div class="btn-container">
+				<button class="btn btn-color-1"onclick="window.open('email.txt')">Email</button>
+			</div>
+				</section>
+
+	<section id="about">
+		<h1 class="title">About Me</h1>	
+		<div class="section-container">
+		<div class="section__pic-container">
+			<img src="pic2.png" class="about-pic" class="about-pic"/>
+		</div>
+
+		<div class="about-details-container">
+			<div class="about-containers">
+			<div class="details-container">
+				<i class="fa fa-briefcase" aria-hidden="true">
+				<h3>Experience</h3>
+				<p>6 months<br/>Office Staff</p>
+				</i>
+			</div>
+			<div class="details-container">
+				<i class="fa fa-graduation-cap" aria-hidden="true">
+				<h3>Education</h3>
+				<p>BTVTE Major in Computer Programming Technology</p>
+				</i>
+			</div>
+			<div class="text-container">
+				<p>Hi My Name is<b> Angelo Joe B. Sierra</b><p>This is my portfolio entry as a fresh graduate and I completed a computer programming technology course at the Universidad de Manila in July 2023 and I have a diverse set of skills, ranging HTML + CSS. </p>
+			</div>
+	</section>
+
+	<section id="portfolio">
+		<center><h1>The Online Restaurant Reservation System</h1></center>
+		<br>
+		<p>This is my project when i was 1st year college, it's called The Online Restaurant Reservation System. When people who want to eat in our restaurant it is able to visit on my website to see the Menu, Location and specially for reservation.
+		<br>
+		<br>
+		<center><h3><i class="fa fa-globe" aria-hidden="true">&nbsp;&nbsp;<a href="https://yakibutafoodhouse.netlify.app/">https://yakibutafoodhouse.netlify.app</i></h3></center></a>
+		<br>
+
+		<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="1.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="2.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="3.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="4.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="5.png" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+	</section>
+
+
+
+</body>
+</html>
